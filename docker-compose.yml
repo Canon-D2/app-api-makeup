@@ -5,7 +5,7 @@ services:
     restart: on-failure
     command: uvicorn main:app --reload --workers 2 --host 0.0.0.0 --port 8080 --proxy-headers
     volumes:
-      - ./:/opt/python-projects/app/
+      - ./:/opt/python-projects/
     ports:
       - "127.0.0.1:8080:8080"
     env_file:
